@@ -1,15 +1,34 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, ScrollView } from 'react-native';
+import { AppText } from './components/core/AppText';
 
 const Stack = createNativeStackNavigator();
 
 function HomeScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-      <Button title="Go to Details" onPress={() => navigation.navigate('Details')} />
+    <View style={{ flex: 1 }}>
+      {/* <Text>Home Screen</Text> */}
+
+      <AppText variant='h1'>Header 1</AppText>
+      <AppText variant='h2'>Header 2</AppText>
+      <AppText variant='h3'>Header 3</AppText>
+      <AppText variant='h4'>Header 4</AppText>
+      <AppText variant='h4Medium'>Header 4</AppText>
+
+      <AppText variant='body1'>Body 1</AppText>
+      <AppText variant='body1Medium'>Body 1</AppText>
+      <AppText variant='body1SemiBold'>Body 1</AppText>
+
+      <AppText variant='body2'>Body 2</AppText>
+      <AppText variant='body2Medium'>Body 2</AppText>
+      <AppText variant='body2SemiBold'>Body 2</AppText>
+
+      <AppText variant='body3'>Body 3</AppText>
+      <AppText variant='body3Medium'>Body 3</AppText>
+      <AppText variant='body3SemiBold'>Body 3</AppText>
+      {/* <Button title="Go to Details" onPress={() => navigation.navigate('Details')} /> */}
     </View>
   );
 }
