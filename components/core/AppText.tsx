@@ -13,7 +13,7 @@ interface AppTextProps extends TextProps {
 }
 
 const AppTextComponent: React.FC<AppTextProps> = ({
-  variant = 'body1',
+  variant = 'body1Medium',
   color = Colors.textPrimary,
   style,
   children,
