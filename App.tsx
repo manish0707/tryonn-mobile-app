@@ -6,7 +6,10 @@ import {AppText} from './components/core/AppText';
 import BaseButton from './components/ui/Button/BaseButton';
 import VariantButton from './components/ui/Button/VariantButton';
 import Icon from './components/ui/Icon';
-import { Icons } from './assets/icons';
+import {Icons} from './assets/icons';
+import {Provider, useSelector} from 'react-redux';
+import {store} from './redux/store';
+import { useAppSelector } from './redux/hooks';
 
 const Stack = createNativeStackNavigator();
 
@@ -40,24 +43,19 @@ function HomeScreen({navigation}) {
 
         <View style={{marginVertical: 10}} />
 
-        <VariantButton variant="dark" >
+        <VariantButton variant="dark">Button</VariantButton>
+
+        <View style={{marginVertical: 10}} />
+
+        <VariantButton variant="light" onPress={() => console.log('first')}>
           Button
         </VariantButton>
 
         <View style={{marginVertical: 10}} />
 
-        <VariantButton variant="light" onPress={() => console.log('first')} >
-          Button
-        </VariantButton>
-
-        <View style={{marginVertical: 10}} />
-
-        <VariantButton variant="disabled" >
-          Button
-        </VariantButton>
+        <VariantButton variant="disabled">Button</VariantButton>
 
         <Icon source={Icons.arrowRight} />
-
       </View>
       {/* <Button title="Go to Details" onPress={() => navigation.navigate('Details')} /> */}
     </View>
@@ -74,11 +72,13 @@ function DetailsScreen() {
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Details" component={DetailsScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="Details" component={DetailsScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
   );
 }
