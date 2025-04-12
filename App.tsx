@@ -1,10 +1,12 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {View, Text, Button, ScrollView} from 'react-native';
+import {View, Text} from 'react-native';
 import {AppText} from './components/core/AppText';
 import BaseButton from './components/ui/Button/BaseButton';
 import VariantButton from './components/ui/Button/VariantButton';
+import Icon from './components/ui/Icon';
+import { Icons } from './assets/icons';
 
 const Stack = createNativeStackNavigator();
 
@@ -53,6 +55,9 @@ function HomeScreen({navigation}) {
         <VariantButton variant="disabled" >
           Button
         </VariantButton>
+
+        <Icon source={Icons.arrowRight} />
+
       </View>
       {/* <Button title="Go to Details" onPress={() => navigation.navigate('Details')} /> */}
     </View>
