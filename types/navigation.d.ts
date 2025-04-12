@@ -6,6 +6,7 @@ export type AppStackParamsList = {
 };
 
 export type AuthStackParamsList = {
+  Onboarding: undefined;
   Login: undefined;
 };
 
