@@ -2,10 +2,12 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {IUser} from '../../types';
 
 interface AuthState {
-  user: any;
+  isLoggedIn: boolean;
+  user: IUser | null;
 }
 
 const initialState: AuthState = {
+  isLoggedIn: false,
   user: null,
 };
 
@@ -15,9 +17,11 @@ const authSlice = createSlice({
   reducers: {
     loginSuccess(state, action: PayloadAction<{user: IUser}>) {
       state.user = action.payload.user;
+      state.isLoggedIn = true;
     },
     logout(state) {
       state.user = null;
+      state.isLoggedIn = false;
     },
   },
 });

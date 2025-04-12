@@ -9,7 +9,8 @@ import Icon from './components/ui/Icon';
 import {Icons} from './assets/icons';
 import {Provider, useSelector} from 'react-redux';
 import {store} from './redux/store';
-import { useAppSelector } from './redux/hooks';
+import {useAppSelector} from './redux/hooks';
+import MainNavigator from './navigation/MainNavigator';
 
 const Stack = createNativeStackNavigator();
 
@@ -73,12 +74,7 @@ function DetailsScreen() {
 export default function App() {
   return (
     <Provider store={store}>
-      <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="Details" component={DetailsScreen} />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <MainNavigator />
     </Provider>
   );
 }
