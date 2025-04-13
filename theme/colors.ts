@@ -15,7 +15,23 @@ const baseColors = {
   white: '#FFFFFF',
 };
 
-export const Colors = {
+export const LightThemeColors = {
+  ...baseColors,
+
+  screenBg: baseColors.white,
+
+  success: baseColors.green,
+  error: baseColors.red,
+
+  textPrimary: baseColors.gray900,
+  textSecondary: baseColors.gray500,
+  textWhite: baseColors.white,
+
+  divider: baseColors.gray200,
+  border: baseColors.gray200,
+};
+
+export const DarkThemeColors = {
   ...baseColors,
 
   screenBg: baseColors.white,

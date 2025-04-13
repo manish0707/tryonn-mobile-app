@@ -1,20 +1,18 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
 import {AppText} from './components/core/AppText';
 import BaseButton from './components/ui/Button/BaseButton';
 import VariantButton from './components/ui/Button/VariantButton';
 import Icon from './components/ui/Icon';
 import {Icons} from './assets/icons';
-import {Provider, useSelector} from 'react-redux';
+import {Provider} from 'react-redux';
 import {store} from './redux/store';
-import {useAppSelector} from './redux/hooks';
 import MainNavigator from './navigation/MainNavigator';
+import ThemeProvider from './context/ThemeContext';
 
-const Stack = createNativeStackNavigator();
 
-function HomeScreen({navigation}) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function HomeScreen() {
   return (
     <View style={{flex: 1}}>
       {/* <Text>Home Screen</Text> */}
@@ -63,18 +61,12 @@ function HomeScreen({navigation}) {
   );
 }
 
-function DetailsScreen() {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Details Screen</Text>
-    </View>
-  );
-}
-
 export default function App() {
   return (
     <Provider store={store}>
-      <MainNavigator />
+      <ThemeProvider>
+        <MainNavigator />
+      </ThemeProvider>
     </Provider>
   );
 }

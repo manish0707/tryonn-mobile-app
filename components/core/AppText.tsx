@@ -3,8 +3,8 @@
 import React from 'react';
 import {Text, TextProps, StyleProp, TextStyle} from 'react-native';
 import {TextVariants} from '../../theme/typography';
-import {Colors} from '../../theme/colors';
 import {TextVariant} from '../../types';
+import {LightThemeColors} from '../../theme/colors';
 
 interface AppTextProps extends TextProps {
   variant?: TextVariant;
@@ -14,7 +14,7 @@ interface AppTextProps extends TextProps {
 
 const AppTextComponent: React.FC<AppTextProps> = ({
   variant = 'body1Medium',
-  color = Colors.textPrimary,
+  color = LightThemeColors.textPrimary,
   style,
   children,
   ...rest
