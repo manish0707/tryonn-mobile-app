@@ -9,6 +9,7 @@ import {Provider} from 'react-redux';
 import {store} from './redux/store';
 import MainNavigator from './navigation/MainNavigator';
 import ThemeProvider from './context/ThemeContext';
+// import Home from './screens/App/Home';
 
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -66,6 +67,8 @@ export default function App() {
     <Provider store={store}>
       <ThemeProvider>
         <MainNavigator />
+
+        {/* <HomeScreen /> */}
       </ThemeProvider>
     </Provider>
   );

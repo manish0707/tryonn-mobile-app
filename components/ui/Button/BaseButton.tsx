@@ -30,7 +30,7 @@ function BaseButton({children, style, ...props}: BaseButtonProps) {
 
 const styles = StyleSheet.create({
   container: {
-    padding: Spacing.md,
+    padding: Spacing.lg,
     borderRadius: Radius.md,
   },
   pressed: {

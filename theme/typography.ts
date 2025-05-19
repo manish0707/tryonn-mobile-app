@@ -8,30 +8,34 @@ const FontSize = {
   body3: 12,
 };
 const FontFamily = {
-  thin: 'PublicSans-Thin',
-  regular: 'PublicSans-Regular',
-  medium: 'PublicSans-Medium',
-  semiBold: 'PublicSans-SemiBold',
-  bold: 'PublicSans-Bold',
+  light: 'Roboto-Light',
+  regular: 'Roboto-Regular',
+  medium: 'Roboto-Medium',
+  semiBold: 'Roboto-SemiBold',
+  bold: 'Roboto-Bold',
 };
 
 // ✅ Semantic Tokens - use only these in components
 export const TextVariants = {
-  h1: {
+  heading: {
     fontSize: FontSize.h1,
     fontFamily: FontFamily.bold,
   },
+  h1: {
+    fontSize: FontSize.h1,
+    fontFamily: FontFamily.semiBold,
+  },
   h2: {
     fontSize: FontSize.h2,
-    fontFamily: FontFamily.bold,
+    fontFamily: FontFamily.semiBold,
   },
   h3: {
     fontSize: FontSize.h3,
-    fontFamily: FontFamily.bold,
+    fontFamily: FontFamily.semiBold,
   },
   h4: {
     fontSize: FontSize.h4,
-    fontFamily: FontFamily.bold,
+    fontFamily: FontFamily.semiBold,
   },
   h4Medium: {
     fontSize: FontSize.h4,
@@ -40,7 +44,7 @@ export const TextVariants = {
 
   body1: {
     fontSize: FontSize.body1,
-    fontFamily: FontFamily.thin,
+    fontFamily: FontFamily.light,
   },
   body1Medium: {
     fontSize: FontSize.body1,
@@ -48,12 +52,12 @@ export const TextVariants = {
   },
   body1SemiBold: {
     fontSize: FontSize.body1,
-    fontFamily: FontFamily.bold,
+    fontFamily: FontFamily.semiBold,
   },
 
   body2: {
     fontSize: FontSize.body2,
-    fontFamily: FontFamily.thin,
+    fontFamily: FontFamily.light,
   },
   body2Medium: {
     fontSize: FontSize.body2,
@@ -61,12 +65,12 @@ export const TextVariants = {
   },
   body2SemiBold: {
     fontSize: FontSize.body2,
-    fontFamily: FontFamily.bold,
+    fontFamily: FontFamily.semiBold,
   },
 
   body3: {
     fontSize: FontSize.body3,
-    fontFamily: FontFamily.thin,
+    fontFamily: FontFamily.light,
   },
   body3Medium: {
     fontSize: FontSize.body3,
@@ -74,6 +78,6 @@ export const TextVariants = {
   },
   body3SemiBold: {
     fontSize: FontSize.body3,
-    fontFamily: FontFamily.bold,
+    fontFamily: FontFamily.semiBold,
   },
 };
